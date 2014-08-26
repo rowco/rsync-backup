@@ -2,38 +2,48 @@
 <!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-    <key>WorkingDirectory</key>
-    <string>/Users/isxrc/Documents/scripts/rsync-backup</string>
-	<key>Label</key>
-	<string>com.launched.backuprun</string>
-	<key>Program</key>
-	<string>/usr/bin/osascript</string>
+    	<key>WorkingDirectory</key>
+<!--
+	####
+	## Edit working directory to be the location of the script
+	####
+-->
+    	<string>/Users/sally/rsync-backup</string>
 	<key>ProgramArguments</key>
+<!--
+	####
+	## Edit arguments to suit your needs
+	####
+-->
 	<array>
 	    <string>osascript</string>
 		<string>run.scpt</string>
 		<string>192.168.0.3</string>
-		<string>/home/isxrc/rsync_backup</string>
+		<string>/home/sally/test</string>
 		<string>wait</string>
 	</array>
-    <key>StartCalendarInterval</key>
-    <dict>
-        <key>Hour</key>
-        <integer>17</integer>
-        <key>Minute</key>
-        <integer>30</integer>
-    </dict>
-    <key>StandardOutPath</key>
-    <string>backup.log</string>
-    <key>StandardErrorPath</key>
-    <string>backup.log</string>
-    <key>KeepAlive</key>
-    <dict>
-        <key>SuccessfulExit</key>
-        <false/>
-    </dict>
-	<key>RunAtLoad</key>
-	<true/>
+	<key>Label</key>
+	<string>com.launched.backuprun</string>
+	<key>Program</key>
+	<string>/usr/bin/osascript</string>
+	<key>StartCalendarInterval</key>
+	<dict>
+    		<key>Hour</key>
+    		<integer>17</integer>
+        	<key>Minute</key>
+        	<integer>30</integer>
+    	</dict>
+    	<key>StandardOutPath</key>
+    	<string>backup.log</string>
+    	<key>StandardErrorPath</key>
+    	<string>backup.log</string>
+    	<key>KeepAlive</key>
+    	<dict>
+        	<key>SuccessfulExit</key>
+        	<false/>
+    	</dict>
+		<key>RunAtLoad</key>
+		<true/>
 	<key>ThrottleInterval</key>
 	<integer>300</integer>
 </dict>

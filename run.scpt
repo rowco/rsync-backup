@@ -13,7 +13,7 @@ on run argv
 
     set long_date to do shell script "date +'%Y-%m-%d %H:%M'"
     set short_date to do shell script "date +%Y-%m-%d"
-    set args to " -a --progress --delete"
+    set args to " -a --progress --delete --no-g"
     set log_args to " --log-file=" & log_path
     set filter_args to " --filter='merge " & filter_path & "'"
     set path_args to " --link-dest=" & remote_path & "/current " & home_path & "/ " & remote_path & "/backup-" & short_date
