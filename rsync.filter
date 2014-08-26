@@ -1,0 +1,11 @@
+- /Library
+- .Trash
+- .HFS+ Private Directory Data*
+- /.journal
+- /.journal_info_block
+- .AppleDouble
+- /lost+found
+- .svn
+- rsync.log
++ /Documents
+- /*
