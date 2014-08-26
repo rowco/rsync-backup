@@ -1,8 +1,8 @@
 on run argv
 
     -- many variables
-    set remote_ip to "192.168.0.3"
-    set remote_path to  "/net/" & remote_ip & "/home/isxrc/rsync_backup"
+    set remote_ip to item 1 of argv
+    set remote_path to  "/net/" & remote_ip & item 2 of argv
 
     set home to path to home folder
     set home_path to POSIX path of home
@@ -24,7 +24,7 @@ on run argv
 
     -- give time for networking to be activated after sleep
 
-    if ( count argv ) is 1 then
+    if ( count argv ) is 3 then
         delay 30
     end if
 

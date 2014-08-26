@@ -2,11 +2,8 @@
 <!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-    <key>EnvironmentVariables</key>
-    <dict>
-        <key>BASE_PATH</key>
-        <string>/Users/isxrc/Documents/scripts/rsync_backup</string>
-    </dict>
+    <key>WorkingDirectory</key>
+    <string>/Users/isxrc/Documents/scripts/rsync-backup</string>
 	<key>Label</key>
 	<string>com.launched.backuprun</string>
 	<key>Program</key>
@@ -14,7 +11,10 @@
 	<key>ProgramArguments</key>
 	<array>
 	    <string>osascript</string>
-		<string>/Users/isxrc/Documents/scripts/rsync_backup/run.scpt wait</string>
+		<string>run.scpt</string>
+		<string>192.168.0.3</string>
+		<string>/home/isxrc/rsync_backup</string>
+		<string>wait</string>
 	</array>
     <key>StartCalendarInterval</key>
     <dict>
@@ -23,12 +23,10 @@
         <key>Minute</key>
         <integer>30</integer>
     </dict>
-    <key>WorkingDirectory</key>
-    <string>/Users/isxrc/Documents/scripts/rsync_backup</string>
     <key>StandardOutPath</key>
-    <string>/Users/isxrc/Documents/scripts/rsync_backup/backup.log</string>
+    <string>backup.log</string>
     <key>StandardErrorPath</key>
-    <string>/Users/isxrc/Documents/scripts/rsync_backup/backup.log</string>
+    <string>backup.log</string>
     <key>KeepAlive</key>
     <dict>
         <key>SuccessfulExit</key>
